@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:migo/view/products/productpage.dart';
+import 'package:migo/view/products/main/product_page.dart';
+import 'package:migo/view/responsive.dart';
 
 class PaymentSuccessPage extends StatefulWidget {
   const PaymentSuccessPage({super.key});
@@ -18,7 +19,7 @@ class _PaymentSuccessPageState extends State<PaymentSuccessPage> {
 
   void navigate() async {
     await Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => ProductsPage());
+      Get.to(() => const ProductsPage());
     });
   }
 
@@ -34,12 +35,12 @@ class _PaymentSuccessPageState extends State<PaymentSuccessPage> {
               Image.asset(
                 "assets/payment_success.png",
                 fit: BoxFit.contain,
-                height: 300,
+                height: Responsive.isMobile(context) ? 200 : 300,
               ),
-              const Text(
+              Text(
                 "Payment was a success",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: Responsive.isMobile(context) ? 20 : 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),

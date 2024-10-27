@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:migo/controller/invoice_controller.dart';
@@ -34,7 +35,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
       Get.put(InvoiceController());
   final PaymentMethodController paymentMethodController =
       Get.put(PaymentMethodController());
-  late StreamSubscription<ConnectivityResult> subscription;
+  late StreamSubscription<List<ConnectivityResult>> subscription;
   String connection = "online";
 
   // ignore: unused_field
@@ -52,8 +53,8 @@ class _PaymentsPageState extends State<PaymentsPage> {
     checkcon();
     subscription = Connectivity()
         .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      if (result == ConnectivityResult.none) {
+        .listen((List<ConnectivityResult> result) {
+      if (result.contains(ConnectivityResult.none)) {
         setState(() {
           connection = "offline";
         });

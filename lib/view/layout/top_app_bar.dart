@@ -21,15 +21,15 @@ class TopAppBar extends StatefulWidget {
 class _TopAppBarState extends State<TopAppBar> {
   final AuthenticationManager _authManager = Get.find();
   String name = "Hayat";
-  late StreamSubscription<ConnectivityResult> subscription;
+  late StreamSubscription<List<ConnectivityResult>> subscription;
   @override
   void initState() {
     super.initState();
     checkcon();
     subscription = Connectivity()
         .onConnectivityChanged
-        .listen((ConnectivityResult result) {
-      if (result == ConnectivityResult.none) {
+        .listen((List<ConnectivityResult> result) {
+      if (result.contains(ConnectivityResult.none)) {
         setState(() {
           name = "⚡ Offline";
         });

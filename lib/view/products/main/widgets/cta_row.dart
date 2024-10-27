@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:migo/utils/functions.dart';
 import 'package:migo/view/products/billing/billing_page.dart';
 import 'package:migo/view/products/salesHistory/sales_history.dart';

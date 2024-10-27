@@ -21,7 +21,7 @@ class Functions {
 
   static Future<ConnectivityResult> checkConnectivity() async {
     var connectivityStatus = await Connectivity().checkConnectivity();
-    return connectivityStatus;
+    return connectivityStatus.first;
   }
 
   static void searchProducts(String query) {

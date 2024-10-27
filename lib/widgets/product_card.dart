@@ -108,8 +108,8 @@ class ProductCard extends StatelessWidget {
 
 class VariantCircle extends StatelessWidget {
   const VariantCircle({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -10,17 +10,16 @@ import 'package:migo/view/responsive.dart';
 import 'package:migo/widgets/billing_page_divider.dart';
 import 'package:migo/widgets/buttons.dart';
 import 'package:migo/widgets/product_link_opener.dart';
-import 'package:migo/widgets/productsToBeBilledListTile.dart';
-import 'package:quantity_input/quantity_input.dart';
+import 'package:migo/widgets/products_tobe_billed_list_tile.dart';
 
 class AddProductsPage extends StatefulWidget {
   final TabController tabController;
   final InvoiceController invoiceController;
   const AddProductsPage({
-    Key? key,
+    super.key,
     required this.tabController,
     required this.invoiceController,
-  }) : super(key: key);
+  });
 
   @override
   State<AddProductsPage> createState() => _AddProductsPageState();
@@ -83,10 +82,10 @@ class ProductsToBeBilledList extends StatelessWidget {
   final TabController tabController;
   final InvoiceController invoiceController;
   const ProductsToBeBilledList({
-    Key? key,
+    super.key,
     required this.tabController,
     required this.invoiceController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -165,10 +164,8 @@ class _ProductsGrid extends StatefulWidget {
   final ProductController productController;
   final InvoiceController invoiceController;
   const _ProductsGrid(
-      {Key? key,
-      required this.productController,
-      required this.invoiceController})
-      : super(key: key);
+      {required this.productController,
+      required this.invoiceController});
 
   @override
   State<_ProductsGrid> createState() => _ProductsGridState();
@@ -308,10 +305,10 @@ class _ProductsGridState extends State<_ProductsGrid> {
 class SearchAndFilterRow extends StatelessWidget {
   final ProductController productController;
   const SearchAndFilterRow({
-    Key? key,
+    super.key,
     required this.productController,
     required this.filterDropdown,
-  }) : super(key: key);
+  });
 
   final DropdownButton<String> filterDropdown;
 

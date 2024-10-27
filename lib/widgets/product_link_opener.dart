@@ -3,13 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:migo/utils/functions.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ProductDescriptionLinkOpener extends StatelessWidget {
   const ProductDescriptionLinkOpener({
-    Key? key,
+    super.key,
     required this.url,
-  }) : super(key: key);
+  });
 
   final String url;
 

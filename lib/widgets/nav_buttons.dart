@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class NavigationButton extends StatelessWidget {
   const NavigationButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.icon,
     required this.tooltipMessage,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   final VoidCallback onPressed;
   final IconData icon;

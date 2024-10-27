@@ -105,8 +105,8 @@ class _AnalyticsPageState extends State<AnalyticsPage> {
 
 class AnalyticsStatus extends StatelessWidget {
   const AnalyticsStatus({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -129,8 +129,8 @@ class AnalyticsStatus extends StatelessWidget {
 
 class RevenueStatus extends StatelessWidget {
   const RevenueStatus({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -183,8 +183,8 @@ class RevenueStatus extends StatelessWidget {
 
 class CustomersStatus extends StatelessWidget {
   const CustomersStatus({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -237,8 +237,8 @@ class CustomersStatus extends StatelessWidget {
 
 class ProductSoldStatus extends StatelessWidget {
   const ProductSoldStatus({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

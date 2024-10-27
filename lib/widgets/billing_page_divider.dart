@@ -3,8 +3,8 @@ import 'package:migo/view/responsive.dart';
 
 class BillingPageDivider extends StatelessWidget {
   const BillingPageDivider({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

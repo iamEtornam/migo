@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:migo/models/authManager.dart';
-import 'package:migo/view/auth/login.dart';
 import 'package:migo/view/notification_page.dart';
 import 'package:migo/view/responsive.dart';
 
 class TopAppBar extends StatefulWidget {
-  const TopAppBar({Key? key, required this.pageName}) : super(key: key);
+  const TopAppBar({super.key, required this.pageName});
 
   final String pageName;
   @override
@@ -15,7 +14,7 @@ class TopAppBar extends StatefulWidget {
 }
 
 class _TopAppBarState extends State<TopAppBar> {
-  AuthenticationManager _authManager = Get.find();
+  final AuthenticationManager _authManager = Get.find();
   @override
   Widget build(BuildContext context) {
     String? chosenDropdownOption;

@@ -43,9 +43,9 @@ class Functions {
   }
 
   static Future<void> launchURL(url) async {
-    final Uri _url = Uri.parse(url);
-    if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) {
-      throw 'Could not launch $_url';
+    final Uri url0 = Uri.parse(url);
+    if (!await launchUrl(url0, mode: LaunchMode.externalApplication)) {
+      throw 'Could not launch $url0';
     }
   }
 }

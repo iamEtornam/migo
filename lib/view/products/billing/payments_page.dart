@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:migo/controller/invoice_controller.dart';
 import 'package:migo/view/products/billing/payment_success.dart';
-import 'package:migo/view/responsive.dart';
 import 'package:migo/widgets/buttons.dart';
-import 'package:migo/widgets/productsToBeBilledListTile.dart';
+import 'package:migo/widgets/products_tobe_billed_list_tile.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 import '../productpage.dart';
@@ -14,9 +12,9 @@ import '../productpage.dart';
 class PaymentsPage extends StatefulWidget {
   final InvoiceController invoiceController;
   const PaymentsPage({
-    Key? key,
+    super.key,
     required this.invoiceController,
-  }) : super(key: key);
+  });
 
   @override
   State<PaymentsPage> createState() => _PaymentsPageState();
@@ -27,7 +25,7 @@ class _PaymentsPageState extends State<PaymentsPage> {
   final InvoiceController invoiceGenerateController =
       Get.put(InvoiceController());
 
-  static const platform = MethodChannel("razorpay_flutter");
+  // static const platform = MethodChannel("razorpay_flutter");
 
   var _razorpay = Razorpay();
 
@@ -145,9 +143,8 @@ class _PaymentsPageState extends State<PaymentsPage> {
 class _ProductsToBeBilledList extends StatelessWidget {
   final InvoiceController invoiceController;
   const _ProductsToBeBilledList({
-    Key? key,
     required this.invoiceController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -196,7 +193,7 @@ class _ProductsToBeBilledList extends StatelessWidget {
                     const Text("Total"),
                     Obx(
                       () => Text(
-                        "₹" + invoiceController.totalAmt.toString(),
+                        "₹${invoiceController.totalAmt}",
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w700,

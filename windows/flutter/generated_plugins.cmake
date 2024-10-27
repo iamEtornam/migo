@@ -3,9 +3,10 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  connectivity_plus_windows
+  connectivity_plus
   permission_handler_windows
   printing
+  share_plus
   url_launcher_windows
 )
 

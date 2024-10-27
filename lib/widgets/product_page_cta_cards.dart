@@ -10,13 +10,13 @@ class ProductCTACard extends StatelessWidget {
   final bool isGoToAdmin;
   final Color? cardColor;
   const ProductCTACard({
-    Key? key,
+    super.key,
     this.toPage = const ProductsPage(),
     required this.caption,
     required this.image,
     required this.cardColor,
     this.isGoToAdmin = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

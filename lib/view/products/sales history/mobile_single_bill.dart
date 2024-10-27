@@ -149,8 +149,8 @@ class MobileBillDetailRow extends StatelessWidget {
   const MobileBillDetailRow({
     required this.property,
     required this.value,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

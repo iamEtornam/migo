@@ -67,12 +67,12 @@ class _SalesHistoryState extends State<SalesHistory> {
                 ),
                 if (Responsive.isDesktop(context))
                   Obx(() {
-                    if (invoiceController.selectedInvoice.value == -1)
+                    if (invoiceController.selectedInvoice.value == -1) {
                       return Expanded(
                         flex: 2,
                         child: SalesHistoryEmptyState(),
                       );
-                    else
+                    } else {
                       return Expanded(
                           flex: 2,
                           child: Obx(
@@ -81,6 +81,7 @@ class _SalesHistoryState extends State<SalesHistory> {
                               invoiceController: invoiceController,
                             ),
                           ));
+                    }
                   }),
               ],
             ),
@@ -94,8 +95,8 @@ class _SalesHistoryState extends State<SalesHistory> {
 
 class SalesHistoryEmptyState extends StatelessWidget {
   const SalesHistoryEmptyState({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -167,8 +168,8 @@ class BillCard extends StatelessWidget {
 
 class BillCardRow2 extends StatelessWidget {
   const BillCardRow2({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -186,10 +187,10 @@ class BillCardRow3 extends StatelessWidget {
   final String typeOfPayment;
   final String customerName;
   const BillCardRow3({
-    Key? key,
+    super.key,
     required this.typeOfPayment,
     required this.customerName,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -224,8 +225,7 @@ class BillCardRow3 extends StatelessWidget {
 class BillCardRow1 extends StatelessWidget {
   final int price;
   final String status;
-  const BillCardRow1({Key? key, required this.price, required this.status})
-      : super(key: key);
+  const BillCardRow1({super.key, required this.price, required this.status});
 
   @override
   Widget build(BuildContext context) {
@@ -249,10 +249,10 @@ class BillLabel extends StatelessWidget {
   final Color color;
   final String status;
   const BillLabel({
-    Key? key,
+    super.key,
     required this.color,
     required this.status,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -274,8 +274,8 @@ class BillLabel extends StatelessWidget {
 
 class ActionRow extends StatelessWidget {
   const ActionRow({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -321,8 +321,8 @@ class ActionRow extends StatelessWidget {
 
 class FilterBtn extends StatelessWidget {
   const FilterBtn({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

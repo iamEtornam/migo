@@ -13,8 +13,8 @@ class ProductToBeBilledListTile extends StatefulWidget {
     required this.product,
     required this.index,
     required this.invoiceController,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<ProductToBeBilledListTile> createState() =>

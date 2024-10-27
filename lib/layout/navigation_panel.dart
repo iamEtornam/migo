@@ -11,8 +11,7 @@ import 'package:migo/widgets/nav_buttons.dart';
 class NavigationPanel extends StatefulWidget {
   final Axis axis;
   final int activeTab;
-  const NavigationPanel({Key? key, required this.axis, required this.activeTab})
-      : super(key: key);
+  const NavigationPanel({super.key, required this.axis, required this.activeTab});
 
   @override
   State<NavigationPanel> createState() => _NavigationPanelState();

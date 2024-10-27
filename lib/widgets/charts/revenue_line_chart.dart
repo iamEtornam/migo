@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:migo/view/responsive.dart';
 
 class RevenueLineChart extends StatefulWidget {
-  const RevenueLineChart({Key? key}) : super(key: key);
+  const RevenueLineChart({super.key});
 
   @override
   _RevenueLineChartState createState() => _RevenueLineChartState();

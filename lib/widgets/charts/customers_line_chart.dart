@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:migo/view/responsive.dart';
 
 class CustomersLineChart extends StatefulWidget {
-  const CustomersLineChart({Key? key}) : super(key: key);
+  const CustomersLineChart({super.key});
 
   @override
   _CustomersLineChartState createState() => _CustomersLineChartState();

@@ -7,7 +7,7 @@ import 'package:migo/view/onboarding/onboarding.dart';
 import 'package:migo/view/products/productpage.dart';
 
 class OnStart extends StatelessWidget {
-  const OnStart({Key? key}) : super(key: key);
+  const OnStart({super.key});
 
   @override
   Widget build(BuildContext context) {

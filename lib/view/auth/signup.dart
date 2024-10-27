@@ -8,7 +8,7 @@ import 'package:migo/view/responsive.dart';
 import 'package:migo/widgets/buttons.dart';
 
 class Signup extends StatefulWidget {
-  const Signup({Key? key}) : super(key: key);
+  const Signup({super.key});
 
   @override
   State<Signup> createState() => _SignupState();

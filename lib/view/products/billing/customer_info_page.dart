@@ -8,7 +8,7 @@ import 'package:migo/widgets/buttons.dart';
 
 class CustomerInfoPage extends StatefulWidget {
   const CustomerInfoPage({
-    Key? key,
+    super.key,
     required this.nameController,
     required this.emailController,
     required this.phonenumberController,
@@ -16,7 +16,7 @@ class CustomerInfoPage extends StatefulWidget {
     required this.formkey,
     required this.tabController,
     required this.invoiceController,
-  }) : super(key: key);
+  });
 
   final TextEditingController nameController;
   final TextEditingController emailController;

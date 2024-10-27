@@ -5,7 +5,7 @@ import 'package:migo/controller/product_controller.dart';
 import 'package:migo/layout/layout.dart';
 import 'package:migo/view/responsive.dart';
 import 'package:migo/widgets/product_page_cta_row.dart';
-import 'package:migo/widgets/productcard.dart';
+import 'package:migo/widgets/product_card.dart';
 
 class ProductsPage extends StatefulWidget {
   const ProductsPage({super.key});

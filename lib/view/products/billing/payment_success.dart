@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:migo/layout/layout.dart';
 import 'package:migo/view/products/productpage.dart';
 
 class PaymentSuccessPage extends StatefulWidget {
@@ -13,7 +12,6 @@ class PaymentSuccessPage extends StatefulWidget {
 class _PaymentSuccessPageState extends State<PaymentSuccessPage> {
   @override
   void initState() {
-    // TODO: implement initState
     navigate();
     super.initState();
   }

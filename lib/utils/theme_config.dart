@@ -58,9 +58,7 @@ ThemeData mainTheme = ThemeData(
   primaryColor: const Color(0xffE5B66A),
   primaryColorDark: const Color(0xffC7984C),
   colorScheme: const ColorScheme(
-    background: Color(0xff0C0D16),
     brightness: Brightness.dark,
-    onBackground: Colors.white,
     primary: Color(0xffFF6900),
     onPrimary: Colors.white,
     secondary: Color(0xff2561ED),

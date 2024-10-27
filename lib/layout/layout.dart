@@ -8,11 +8,10 @@ class AppLayout extends StatelessWidget {
   final String pageName;
   final int activeTab;
   const AppLayout(
-      {Key? key,
+      {super.key,
       required this.content,
       required this.pageName,
-      required this.activeTab})
-      : super(key: key);
+      required this.activeTab});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatefulWidget {
   const PrimaryButton({
-    Key? key,
+    super.key,
     this.buttonTitle,
     required this.onPressed,
     this.imageLeft,
@@ -14,7 +14,7 @@ class PrimaryButton extends StatefulWidget {
     this.border = BorderSide.none,
     this.horzPad = 8,
     this.vertPad = 14,
-  }) : super(key: key);
+  });
   final String? buttonTitle;
   final void Function()? onPressed;
   final Image? imageLeft;
@@ -38,16 +38,16 @@ class _PrimaryButtonState extends State<PrimaryButton> {
     return ElevatedButton(
       onPressed: widget.onPressed,
       style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all<Color?>(widget.textColor),
-        backgroundColor: MaterialStateProperty.all<Color?>(widget.bgColor),
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(
+        foregroundColor: WidgetStateProperty.all<Color?>(widget.textColor),
+        backgroundColor: WidgetStateProperty.all<Color?>(widget.bgColor),
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(
             EdgeInsets.symmetric(
                 vertical: widget.vertPad, horizontal: widget.horzPad)),
-        shape: MaterialStateProperty.resolveWith<OutlinedBorder>((_) {
+        shape: WidgetStateProperty.resolveWith<OutlinedBorder>((_) {
           return RoundedRectangleBorder(
               side: widget.border, borderRadius: BorderRadius.circular(8));
         }),
-        elevation: MaterialStateProperty.all<double>(0),
+        elevation: WidgetStateProperty.all<double>(0),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

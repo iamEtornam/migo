@@ -4,7 +4,7 @@ import 'package:migo/view/responsive.dart';
 import 'package:migo/widgets/indicator.dart';
 
 class ProductsSoldByCategoryChart extends StatefulWidget {
-  const ProductsSoldByCategoryChart({Key? key}) : super(key: key);
+  const ProductsSoldByCategoryChart({super.key});
 
   @override
   State<StatefulWidget> createState() => PieChart2State();

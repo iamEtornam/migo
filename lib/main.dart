@@ -28,10 +28,8 @@ class _MiGoState extends State<MiGo> {
     const QuickActions quickActions = QuickActions();
     quickActions.initialize((String shortcutType) {
       setState(() {
-        if (shortcutType != null) {
-          shortcut = shortcutType;
-        }
-      });
+        shortcut = shortcutType;
+            });
     });
 
     quickActions.setShortcutItems([
